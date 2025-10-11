@@ -4,106 +4,104 @@ export const Login = () => {
   const [isLoginMode, setIsLoginMode] = useState(true);
 
   return (
-    <div className="w-[430px] bg-amber-50 p-8 rounded-2xl shadow-lg">
-      {/* Header title */}
-      <div className="flex justify-center mb-4">
-        <h2 className="text-3xl font-semibold text-center">
-          {isLoginMode ? 'Login' : 'Sign Up'}
-        </h2>
-      </div>
+    <div className="flex items-center justify-center min-h-screen bg-[#F5FFF8]">
+      <div className="w-[430px] bg-white p-8 rounded-2xl shadow-lg border border-[#A3D9A5]">
+        {/* Header title */}
+        <div className="flex justify-center mb-4">
+          <h2 className="text-3xl font-semibold text-center text-[#2E8B57]">
+            {isLoginMode ? 'Login' : 'Sign Up'}
+          </h2>
+        </div>
 
-      {/* Tab control */}
-      <div className="relative flex h-12 mb-6 border border-gray-300 rounded-full overflow-hidden">
-        <button
-          onClick={() => setIsLoginMode(true)}
-          className={`w-1/2 text-lg font-medium transition-all z-10 ${
-            isLoginMode ? 'text-white' : 'text-black'
-          }`}
-        >
-          Login
-        </button>
-        <button
-          onClick={() => setIsLoginMode(false)}
-          className={`w-1/2 text-lg font-medium transition-all z-10 ${
-            !isLoginMode ? 'text-white' : 'text-black'
-          }`}
-        >
-          Sign Up
-        </button>
-        <div
-          className={`absolute top-0 h-full w-1/2 rounded-full bg-gradient-to-r from-blue-700 via-cyan-600 to-cyan-200 transition-all duration-300 ${
-            isLoginMode ? 'left-0' : 'left-1/2'
-          }`}
-        ></div>
-      </div>
+        {/* Tab control */}
+        <div className="relative flex h-12 mb-6 border border-[#A3D9A5] rounded-full overflow-hidden">
+          <button
+            onClick={() => setIsLoginMode(true)}
+            className={`w-1/2 text-lg font-medium transition-all z-10 ${
+              isLoginMode ? 'text-white' : 'text-[#333]'
+            }`}
+          >
+            Login
+          </button>
+          <button
+            onClick={() => setIsLoginMode(false)}
+            className={`w-1/2 text-lg font-medium transition-all z-10 ${
+              !isLoginMode ? 'text-white' : 'text-[#333]'
+            }`}
+          >
+            Sign Up
+          </button>
+          <div
+            className={`absolute top-0 h-full w-1/2 rounded-full bg-gradient-to-r from-[#2E8B57] to-[#FF7A00] transition-all duration-300 ${
+              isLoginMode ? 'left-0' : 'left-1/2'
+            }`}
+          ></div>
+        </div>
 
-      {/* Form section */}
-      <form className="space-y-4">
-        {!isLoginMode && (
+        {/* Form section */}
+        <form className="space-y-5">
+          {!isLoginMode && (
+            <input
+              type="text"
+              placeholder="Full Name"
+              required
+              className="w-full p-3 border-b-2 border-[#A3D9A5] outline-none focus:border-[#FF7A00] placeholder-gray-500"
+            />
+          )}
+
+          {/* Shared input fields */}
           <input
-            type="text"
-            placeholder="Name"
+            type="email"
+            placeholder="Email Address"
             required
-            className="w-full p-3 border-b-2 border-gray-300 outline-none focus:border-cyan-500 placeholder-gray-400"
+            className="w-full p-3 border-b-2 border-[#A3D9A5] outline-none focus:border-[#FF7A00] placeholder-gray-500"
           />
-        )}
-
-        {/* Shared input fields */}
-        <input
-          type="email"
-          placeholder="Email"
-          required
-          className="w-full p-3 border-b-2 border-gray-300 outline-none focus:border-cyan-500 placeholder-gray-400"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          required
-          className="w-full p-3 border-b-2 border-gray-300 outline-none focus:border-cyan-500 placeholder-gray-400"
-        />
-
-        {/* Signup extra field */}
-        {!isLoginMode && (
           <input
             type="password"
-            placeholder="Confirm Password"
+            placeholder="Password"
             required
-            className="w-full p-3 border-b-2 border-gray-300 outline-none focus:border-cyan-500 placeholder-gray-400"
+            className="w-full p-3 border-b-2 border-[#A3D9A5] outline-none focus:border-[#FF7A00] placeholder-gray-500"
           />
-        )}
 
-        {/* Forgot Password */}
-        {isLoginMode && (
-          <div className="text-right">
-            <p className="text-cyan-600 hover:underline cursor-pointer">
-              Forgot Password?
-            </p>
-          </div>
-        )}
+          {!isLoginMode && (
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              required
+              className="w-full p-3 border-b-2 border-[#A3D9A5] outline-none focus:border-[#FF7A00] placeholder-gray-500"
+            />
+          )}
 
-        {/* Shared button */}
-        <button
-          type="submit"
-          className="w-full p-3 bg-gradient-to-r from-blue-700 via-cyan-600 to-cyan-200 text-white rounded-full text-lg font-medium hover:opacity-90 transition"
-        >
-          {isLoginMode ? 'Login' : 'Sign Up'}
-        </button>
+          {isLoginMode && (
+            <div className="text-right">
+              <p className="text-[#2E8B57] hover:underline cursor-pointer text-sm">
+                Forgot Password?
+              </p>
+            </div>
+          )}
 
-        {/* Switch link */}
-        <p className="text-center text-gray-600">
-          {isLoginMode ? "Don't have an account?" : 'Already have an account? '}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsLoginMode(!isLoginMode);
-            }}
-            className="text-cyan-600 hover:underline"
+          <button
+            type="submit"
+            className="w-full p-3 bg-gradient-to-r from-[#2E8B57] to-[#FF7A00] text-white rounded-full text-lg font-medium hover:opacity-90 transition-all shadow-md"
           >
-            {isLoginMode ? 'Sign Up Now' : 'Login'}
-          </a>
-        </p>
-      </form>
+            {isLoginMode ? 'Login' : 'Sign Up'}
+          </button>
+
+          <p className="text-center text-[#333] text-sm">
+            {isLoginMode ? "Don't have an account?" : 'Already have an account? '}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsLoginMode(!isLoginMode);
+              }}
+              className="text-[#FF7A00] font-medium hover:underline"
+            >
+              {isLoginMode ? 'Sign Up Now' : 'Login'}
+            </a>
+          </p>
+        </form>
+      </div>
     </div>
   );
 };

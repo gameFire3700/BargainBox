@@ -1,12 +1,20 @@
 
 import React from 'react'
+import LandingPage from "./Components/LandingPage";
 import Login from './Components/Login'
+import Card from './Components/Card'
 
 export const App = () => {
   return (
 
-    <div className='grid w-[100%] h-screen place-items-center bg-cyan-400'>
-       <Login/>
+    <div >
+       
+       <LandingPage/>
+       <br></br>
+       <Card/>
+         
+       <Login/> <br/>
+      
       </div>
   )
 }
