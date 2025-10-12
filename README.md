@@ -1,16 +1,28 @@
-# React + Vite
+# React 
+🛒 Local Kirana Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, user-friendly web application for local grocery (Kirana) stores, designed to help customers browse products, place orders, and support neighborhood businesses online.
 
-Currently, two official plugins are available:
+🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Product Catalog: Browse items by category (fruits, vegetables, staples, snacks, beverages, etc.)
 
-## React Compiler
+Search & Filter: Quickly find the items you need.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Shopping Cart: Add products to the cart and view the total bill.
 
-## Expanding the ESLint configuration
+Checkout & Orders: Place orders for delivery or pickup.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Local Focus: Supports neighborhood kirana stores.
+
+Responsive Design: Works seamlessly on mobile, tablet, and desktop.
+
+🛠️ Tech Stack
+
+Frontend: HTML, CSS, JavaScript, Bootstrap/Tailwind
+
+Backend: Node.js / Express (or Django/Flask if using Python)
+
+Database: MongoDB / MySQL / PostgreSQL
+
+Hosting: Netlify / Vercel / Local Serve
