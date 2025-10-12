@@ -8,5 +8,6 @@ export default defineConfig({
     tailwindcss(),
 
   ],
-  base:'/BargainBox/'
+  base: process.env.NODE_ENV === 'production' ? '/bargainbox/' : '/',
+  historyApiFallback: true,
 })
