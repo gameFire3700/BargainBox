@@ -7,21 +7,21 @@ import Login from "./Components/Login";
 import AboutUs from "./Components/AboutUs";
 import Features from "./Components/Features";
 import ContactUs from "./Components/ContactUs";
-import Card from "./Components/Card";
+import Dashboard from "./Components/Dashboard";
+import AdminDashboard from "./Components/Admin/AdminDashboard";
+import CartPage from "./Pages/CartPage";
 
-// Layout shared across all pages
+
 const Layout = () => (
-  <div>
+  <div className="flex flex-col min-h-screen">
     <Navbar />
-    <main className="min-h-screen">
+    <main className="flex-grow">
       <Outlet />
     </main>
-    <Card/>
     <Footer />
   </div>
 );
- 
-// Router setup
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,12 +32,14 @@ const router = createBrowserRouter([
       { path: "aboutus", element: <AboutUs /> },
       { path: "features", element: <Features /> },
       { path: "contact", element: <ContactUs /> },
+      { path: "dashboard", element: <Dashboard /> },
+      { path: "admin", element: <AdminDashboard /> },
+      { path: "/cart", element: <CartPage />} ,
     ],
-    errorElement: (
-      <h2 className="text-center text-red-500 mt-10">❌ Page Not Found</h2>
-    ),
+    errorElement: <h2 className="text-center text-red-500 mt-10">❌ Page Not Found</h2>,
   },
 ]);
 
 const App = () => <RouterProvider router={router} />;
+
 export default App;

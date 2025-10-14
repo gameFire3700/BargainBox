@@ -7,6 +7,7 @@ const AboutUs = () => (
       We are your local Kirana store bringing convenience and savings to your doorstep.
     </p>
   </div>
+  
 );
 
 export default AboutUs;

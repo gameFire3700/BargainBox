@@ -20,9 +20,10 @@ import SugarImg from "../assets/images/sugar.png"; // also fixed sugar extension
 
 export default function ProductGrid() {
 
-  return (
 
-   
+    return (
+
+ 
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
 
@@ -72,7 +73,7 @@ export default function ProductGrid() {
 
         savings="Save ₹100"
 
-        reviews="80 reviews"
+        reviews="80 reviews"
 
       />
 
