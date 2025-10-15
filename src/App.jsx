@@ -10,7 +10,7 @@ import ContactUs from "./Components/ContactUs";
 import Dashboard from "./Components/Dashboard";
 import AdminDashboard from "./Components/Admin/AdminDashboard";
 import CartPage from "./Pages/CartPage";
-
+import SearchResults from "./Pages/SearchResults"; 
 
 const Layout = () => (
   <div className="flex flex-col min-h-screen">
@@ -34,8 +34,9 @@ const router = createBrowserRouter([
       { path: "contact", element: <ContactUs /> },
       { path: "dashboard", element: <Dashboard /> },
       { path: "admin", element: <AdminDashboard /> },
-      { path: "/cart", element: <CartPage />} ,
-    ],
+      { path: "cart", element: <CartPage />} ,
+      { path: "search", element: <SearchResults /> },
+    ], 
     errorElement: <h2 className="text-center text-red-500 mt-10">❌ Page Not Found</h2>,
   },
 ]);

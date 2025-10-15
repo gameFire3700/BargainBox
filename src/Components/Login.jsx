@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
+import Image1 from "../assets/images/login_background.jpg";
 
 export const Login = () => {
   const [isLoginMode, setIsLoginMode] = useState(true);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#F5FFF8]">
-      <div className="w-[430px] bg-white p-8 rounded-2xl shadow-lg border border-[#A3D9A5]">
+    <div
+      className="flex items-center justify-center min-h-screen bg-center bg-cover relative"
+      style={{
+        backgroundImage: `url(${Image1})`,
+      }}
+    >
+      {/* Overlay for low-contrast effect */}
+      <div className="absolute inset-0 bg-[#F5FFF8] bg-opacity-40"></div>
+
+      {/* Form container */}
+      <div className="relative w-[430px] bg-white bg-opacity-90 p-8 rounded-2xl shadow-lg border border-[#A3D9A5] z-10">
         {/* Header title */}
         <div className="flex justify-center mb-4">
           <h2 className="text-3xl font-semibold text-center text-[#2E8B57]">
@@ -49,7 +59,6 @@ export const Login = () => {
             />
           )}
 
-          {/* Shared input fields */}
           <input
             type="email"
             placeholder="Email Address"
